@@ -1,0 +1,27 @@
+[0.308s] Invoking command in '/home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge': PYTHONPATH=/home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/unity_udp_ros_bridge build --build-base /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/build install --record /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/install.log --single-version-externally-managed install_data
+[0.431s] running egg_info
+[0.432s] writing build/unity_udp_ros_bridge/unity_udp_ros_bridge.egg-info/PKG-INFO
+[0.432s] writing dependency_links to build/unity_udp_ros_bridge/unity_udp_ros_bridge.egg-info/dependency_links.txt
+[0.432s] writing entry points to build/unity_udp_ros_bridge/unity_udp_ros_bridge.egg-info/entry_points.txt
+[0.432s] writing requirements to build/unity_udp_ros_bridge/unity_udp_ros_bridge.egg-info/requires.txt
+[0.432s] writing top-level names to build/unity_udp_ros_bridge/unity_udp_ros_bridge.egg-info/top_level.txt
+[0.433s] reading manifest file 'build/unity_udp_ros_bridge/unity_udp_ros_bridge.egg-info/SOURCES.txt'
+[0.433s] writing manifest file 'build/unity_udp_ros_bridge/unity_udp_ros_bridge.egg-info/SOURCES.txt'
+[0.433s] running build
+[0.433s] running build_py
+[0.433s] copying unity_udp_ros_bridge/udp_bridge_pub.py -> /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/build/lib/unity_udp_ros_bridge
+[0.433s] copying unity_udp_ros_bridge/udp_bridge_sub.py -> /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/build/lib/unity_udp_ros_bridge
+[0.433s] running install
+[0.433s] running install_lib
+[0.434s] copying /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/build/lib/unity_udp_ros_bridge/udp_bridge_pub.py -> /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/python3.10/site-packages/unity_udp_ros_bridge
+[0.434s] copying /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/build/lib/unity_udp_ros_bridge/udp_bridge_sub.py -> /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/python3.10/site-packages/unity_udp_ros_bridge
+[0.434s] byte-compiling /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/python3.10/site-packages/unity_udp_ros_bridge/udp_bridge_pub.py to udp_bridge_pub.cpython-310.pyc
+[0.435s] byte-compiling /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/python3.10/site-packages/unity_udp_ros_bridge/udp_bridge_sub.py to udp_bridge_sub.cpython-310.pyc
+[0.435s] running install_data
+[0.435s] running install_egg_info
+[0.436s] removing '/home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/python3.10/site-packages/unity_udp_ros_bridge-0.0.0-py3.10.egg-info' (and everything under it)
+[0.436s] Copying build/unity_udp_ros_bridge/unity_udp_ros_bridge.egg-info to /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/python3.10/site-packages/unity_udp_ros_bridge-0.0.0-py3.10.egg-info
+[0.436s] running install_scripts
+[0.448s] Installing udp_bridge script to /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/unity_udp_ros_bridge
+[0.449s] writing list of installed files to '/home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/install.log'
+[0.461s] Invoked command in '/home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge' returned '0': PYTHONPATH=/home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/install/unity_udp_ros_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/unity_udp_ros_bridge build --build-base /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/build install --record /home/henry/unity_udp_ros_bridge/src/unity_udp_ros_bridge/build/unity_udp_ros_bridge/install.log --single-version-externally-managed install_data
