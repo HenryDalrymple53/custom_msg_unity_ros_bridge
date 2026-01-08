@@ -1,0 +1,2 @@
+ros2 interface list - shows all messages, services, actions
+ros2 interface show [std_msgs/msg/your_message_here] - lists the actual fields

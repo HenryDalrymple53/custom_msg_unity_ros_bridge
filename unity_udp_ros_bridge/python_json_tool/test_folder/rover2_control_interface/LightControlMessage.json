@@ -1,0 +1,6 @@
+{
+    "msgType": "LightControlMessage",
+    "data": {
+        "light_mode": 0
+    }
+}

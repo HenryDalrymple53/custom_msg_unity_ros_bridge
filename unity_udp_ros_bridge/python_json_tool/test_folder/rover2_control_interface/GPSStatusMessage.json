@@ -1,0 +1,9 @@
+{
+    "msgType": "GPSStatusMessage",
+    "data": {
+        "rover_latitude": 0.0,
+        "rover_longitude": 0.0,
+        "astronaut_latitude": 0.0,
+        "astronaut_longitude": 0.0
+    }
+}

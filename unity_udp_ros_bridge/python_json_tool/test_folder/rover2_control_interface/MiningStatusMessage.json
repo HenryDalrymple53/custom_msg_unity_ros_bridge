@@ -1,0 +1,20 @@
+{
+    "msgType": "MiningStatusMessage",
+    "data": {
+        "probe_temp_c": 0.0,
+        "probe_moisture": 0.0,
+        "probe_loss_tangent": 0.0,
+        "probe_soil_elec_cond": 0.0,
+        "probe_real_dielec_perm": 0.0,
+        "probe_imag_dielec_perm": 0.0,
+        "motor_current_position": 0,
+        "linear_current_position": 0,
+        "temp1": 0,
+        "temp2": 0,
+        "motor_current": 0.0,
+        "linear_current": 0.0,
+        "switch1_out": false,
+        "switch2_out": false,
+        "homing_needed": false
+    }
+}

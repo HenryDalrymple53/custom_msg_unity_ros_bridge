@@ -1,0 +1,17 @@
+{
+    "msgType": "DriveStatusMessage",
+    "data": {
+        "first_motor_connected": false,
+        "second_motor_connected": false,
+        "third_motor_connected": false,
+        "first_motor_current": 0.0,
+        "second_motor_current": 0.0,
+        "third_motor_current": 0.0,
+        "first_motor_fault": false,
+        "second_motor_fault": false,
+        "third_motor_fault": false,
+        "first_motor_temp": 0.0,
+        "second_motor_temp": 0.0,
+        "third_motor_temp": 0.0
+    }
+}

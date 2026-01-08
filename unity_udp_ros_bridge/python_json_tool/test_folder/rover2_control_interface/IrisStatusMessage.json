@@ -1,0 +1,7 @@
+{
+    "msgType": "IrisStatusMessage",
+    "data": {
+        "iris_connected": false,
+        "voltage_24v": 0
+    }
+}
