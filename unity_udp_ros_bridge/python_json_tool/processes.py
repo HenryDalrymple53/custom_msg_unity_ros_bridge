@@ -55,6 +55,8 @@ class Processes:
             lib = line.split("/")[0]
             self.service_libs[lib] = 0
 
+            
+
     def process_msgs(self):
         output = run(["ros2", "interface", "list"], capture_output=True, text=True, check=True)
         output_str = output.stdout
@@ -134,6 +136,8 @@ class Processes:
         
         return result, i
 
+
+
     def convert_to_json(self,save_dir):
         for msg in self.message_dict:
             if self.message_libs[msg.split("/")[0]]:
@@ -160,11 +164,15 @@ class Processes:
 
                 print(json.dumps(ros_json, indent=4))
 
+
+
     def is_primitive_type(self, type_string):
     
         base_type = type_string.split('[')[0]
         
         return base_type in self.ros2Primitives
+
+
 
     def get_default_value(self, type_string):
         base_type = type_string.split('[')[0]
