@@ -1,0 +1,13 @@
+{
+    "topic": "",
+    "msgType": "rover2_status_interface/msg/FilteredLog",
+    "data": {
+        "stamp": {
+            "sec": 0,
+            "nanosec": 0
+        },
+        "name": "",
+        "level": 0,
+        "msg": ""
+    }
+}

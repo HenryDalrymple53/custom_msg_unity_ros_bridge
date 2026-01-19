@@ -1,8 +1,0 @@
-{
-    "msgType": "DriveControlMessage",
-    "data": {
-        "first_motor_direction": false,
-        "first_motor_sleep": false,
-        "first_motor_speed": 0
-    }
-}

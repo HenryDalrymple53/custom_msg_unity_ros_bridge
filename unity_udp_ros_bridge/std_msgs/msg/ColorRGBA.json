@@ -1,0 +1,10 @@
+{
+    "topic": "",
+    "msgType": "std_msgs/msg/ColorRGBA",
+    "data": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+    }
+}

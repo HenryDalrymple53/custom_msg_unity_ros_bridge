@@ -1,0 +1,11 @@
+{
+    "topic": "",
+    "msgType": "rover2_control_interface/msg/TowerPanTiltControlMessage",
+    "data": {
+        "should_center": false,
+        "relative_pan_adjustment": 0,
+        "relative_tilt_adjustment": 0,
+        "hitch_servo_positive": false,
+        "hitch_servo_negative": false
+    }
+}

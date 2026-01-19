@@ -1,6 +1,7 @@
 import os
 from subprocess import run
 import json
+from pathlib import Path
 
 class Processes:
     def __init__(self):
@@ -148,20 +149,19 @@ class Processes:
                 line_data, _ = self.parse_message_structure(lines)
                 
                 ros_json = {
-                    "msgType": msg.split("/")[2],
+                    "topic": "",
+                    "msgType": msg,
                     "data": line_data
                 }
 
-                write_directory = str(save_dir) + "/" + msg.split("/")[0]
 
-                if not os.path.isdir(write_directory):
-                    os.mkdir(write_directory)
+                write_directory = Path(save_dir) / msg.split("/")[0] / msg.split("/")[1]
+                write_directory.mkdir(parents=True, exist_ok=True)
 
-                file_name = write_directory + "/" + msg.split("/")[2] + ".json"
+                file_name = write_directory / f"{msg.split('/')[2]}.json"
 
-                with open(file_name, "w+") as json_file:
+                with open(file_name, "w") as json_file:
                     json.dump(ros_json, json_file, indent=4)
-
                 print(json.dumps(ros_json, indent=4))
 
 

@@ -6,14 +6,20 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json.Linq;
 using System;
+using UnityEditor.VersionControl;
 
 public class UdpController : MonoBehaviour
 {
     public static UdpController inst;
     private UdpClient udpClient;           // for sending
     private UdpClient udpReceiveClient;    // for receiving
+    private UdpClient configClient;
+    
     private IPEndPoint serverEndPoint;
     private IPEndPoint receiveEndPoint;
+
+    private IPEndPoint configEndPoint;
+
     private bool isConnected;
     public bool disconnected;
 
@@ -21,6 +27,8 @@ public class UdpController : MonoBehaviour
     public string serverIP = "127.0.0.1";
     public int UDPSendPort = 65434;
     public int UDPReceivePort = 65435;
+
+    public int UDPSendConfig = 65436;
 
     [Header("Connection Status")]
     public bool showDebugLogs = true;
@@ -39,27 +47,32 @@ public class UdpController : MonoBehaviour
 
         try
         {
-            // Send client
+            // Main send client
             udpClient = new UdpClient();
             serverEndPoint = new IPEndPoint(IPAddress.Parse(serverIP), UDPSendPort);
 
-            // Receive client bound to the receive port
+            // Receive client
             udpReceiveClient = new UdpClient(UDPReceivePort);
             receiveEndPoint = new IPEndPoint(IPAddress.Any, 0);
+
+            // Config client
+            configClient = new UdpClient();
+            configEndPoint = new IPEndPoint(IPAddress.Parse(serverIP), UDPSendConfig);
 
             isConnected = true;
             disconnected = false;
 
             if (showDebugLogs)
-                Debug.Log($"UDP Control Controller initialized for send:{serverIP}:{UDPSendPort}, receive:{UDPReceivePort}");
+                Debug.Log($"UDP Controller initialized: send:{serverIP}:{UDPSendPort}, receive:{UDPReceivePort}, config:{UDPSendConfig}");
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"Could not initialize UDP Control Controller: {e.Message}");
+            Debug.LogError($"Could not initialize UDP Controller: {e.Message}");
             disconnected = true;
             isConnected = false;
         }
     }
+
 
     void Update()
     {
@@ -76,6 +89,7 @@ public class UdpController : MonoBehaviour
                 string topic = message["topic"]?.ToString();
                 if (!string.IsNullOrEmpty(topic))
                 {
+
                     latestMessages[topic] = message;
                     if (showDebugLogs)
                         Debug.Log($"Updated latest message for topic: {topic}");
@@ -87,6 +101,40 @@ public class UdpController : MonoBehaviour
             }
         }
     }
+
+    public void ConfigureSubscription(string topic, string msgType)
+    {
+        string message = topic + ";" + msgType;
+        if (showDebugLogs)
+            Debug.Log($"Sending config UDP Message: {message}");
+
+        if (!isConnected || configClient == null)
+        {
+            Debug.LogWarning("UDP config connection is not established. Attempting reconnect.");
+            Start();
+            if (!isConnected || configClient == null)
+            {
+                Debug.LogWarning("UDP config reconnect failed. Canceling publish.");
+                return;
+            }
+        }
+
+        try
+        {
+            byte[] dataToSend = Encoding.UTF8.GetBytes(message);
+            configClient.Send(dataToSend, dataToSend.Length, configEndPoint);
+
+            disconnected = false;
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning($"Error while sending UDP config data: {e.Message}");
+            disconnected = true;
+            isConnected = false;
+        }
+    }
+
+
 
     public void PublishMessage(string message)
     {
@@ -118,6 +166,7 @@ public class UdpController : MonoBehaviour
             isConnected = false;
         }
     }
+    
 
     // Get the latest message for a topic
     public JObject GetLatestMessage(string topic)

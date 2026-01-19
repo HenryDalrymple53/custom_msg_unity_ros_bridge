@@ -4,7 +4,7 @@ from unity_udp_ros_bridge.UDPServer import UDPServer
 from threading import Thread
 
 from std_msgs.msg import String
-from rover2_control_interface.msg import DriveCommandMessage
+from rosidl_runtime_py.utilities import get_message
 import json
 
 class UDPBridgePub(Node):
@@ -25,6 +25,8 @@ class UDPBridgePub(Node):
         self.udp_thread.start()
 
         self.get_logger().info("UDPBridgePub node initialized.")
+        self.msg_type_cache = {}
+
 
     def set_fields_from_dict(self, msg_obj, data_dict):
         
@@ -49,7 +51,7 @@ class UDPBridgePub(Node):
 
             # Parse JSON
             payload = json.loads(message)
-
+            print(payload)
             # Expect keys: "topic" and "msgType", "data"
             topic_name = payload.get("topic")
             messageType = payload.get("msgType")
@@ -59,12 +61,12 @@ class UDPBridgePub(Node):
             if topic_name is None or messageType is None:
                 self.get_logger().error("JSON missing required keys 'topic' or 'msgType'")
                 return
-
             # Get message class dynamically
-            if messageType not in globals():
-                self.get_logger().error(f"Unknown message type: {messageType}")
-                return
-            msg_class = globals()[messageType]
+            if messageType not in self.msg_type_cache:
+                self.msg_type_cache[messageType] = get_message(messageType)
+
+            msg_class = self.msg_type_cache[messageType]
+
 
             # Create publisher if it doesn't exist
             if topic_name not in self.publisher_dict:

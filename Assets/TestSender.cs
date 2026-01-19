@@ -20,14 +20,13 @@ public class TestSender : MonoBehaviour
         {
             driveMessage = JObject.Parse(driveMessageJson.text);
             driveMessage["topic"] = "drive_topic";
-            driveMessage["msgType"] = "DriveCommandMessage";
             driveMessage["data"]["controller_present"] = false;
             driveMessage["data"]["drive_twist"]["linear"]["x"] = 2.5;
             driveMessage["data"]["drive_twist"]["linear"]["y"] = -0.8;
             
 
             string msg = driveMessage.ToString();
-            Debug.Log("Drive message:\n" + msg);
+            //Debug.Log("Drive message:\n" + msg);
 
             udpController.PublishMessage(msg);
             yield return new WaitForSeconds(1f); // Wait 1 second

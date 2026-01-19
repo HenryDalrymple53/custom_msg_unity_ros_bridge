@@ -12,6 +12,7 @@ public class TestReceiver : MonoBehaviour
     void Start()
     {
         StartCoroutine(RunAtInterval());
+        udpController.ConfigureSubscription("drive_topic","rover2_control_interface/msg/DriveCommandMessage");
     }
     
     IEnumerator RunAtInterval()

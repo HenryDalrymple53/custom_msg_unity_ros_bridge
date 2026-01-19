@@ -1,0 +1,13 @@
+{
+    "topic": "",
+    "msgType": "rover2_status_interface/msg/TractionStatus",
+    "data": {
+        "timestamp": {
+            "sec": 0,
+            "nanosec": 0
+        },
+        "id": [],
+        "names": [],
+        "slipstate": []
+    }
+}

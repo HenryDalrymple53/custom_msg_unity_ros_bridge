@@ -1,0 +1,9 @@
+{
+    "topic": "",
+    "msgType": "std_msgs/msg/MultiArrayDimension",
+    "data": {
+        "label": "",
+        "size": 0,
+        "stride": 0
+    }
+}

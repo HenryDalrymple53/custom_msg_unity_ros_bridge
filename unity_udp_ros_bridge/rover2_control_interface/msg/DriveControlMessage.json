@@ -1,0 +1,9 @@
+{
+    "topic": "",
+    "msgType": "rover2_control_interface/msg/DriveControlMessage",
+    "data": {
+        "first_motor_direction": false,
+        "first_motor_sleep": false,
+        "first_motor_speed": 0
+    }
+}

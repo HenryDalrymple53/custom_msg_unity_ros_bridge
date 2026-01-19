@@ -1,0 +1,7 @@
+{
+    "topic": "",
+    "msgType": "rover2_control_interface/msg/LightControlMessage",
+    "data": {
+        "light_mode": 0
+    }
+}

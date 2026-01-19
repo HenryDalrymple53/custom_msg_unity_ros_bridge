@@ -1,9 +1,0 @@
-{
-    "msgType": "GripperControlMessage",
-    "data": {
-        "target": 0,
-        "should_home": false,
-        "toggle_light": false,
-        "toggle_laser": false
-    }
-}

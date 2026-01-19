@@ -1,7 +1,0 @@
-{
-    "topic": "chatter",
-    "msgType": "String",
-    "data": {
-        "data": "Hello from JSON UDP!"
-    }
-}

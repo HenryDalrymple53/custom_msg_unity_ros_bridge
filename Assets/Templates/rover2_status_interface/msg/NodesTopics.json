@@ -1,0 +1,10 @@
+{
+    "topic": "",
+    "msgType": "rover2_status_interface/msg/NodesTopics",
+    "data": {
+        "topic_name": [],
+        "topic_status": [],
+        "node_name": [],
+        "node_status": []
+    }
+}

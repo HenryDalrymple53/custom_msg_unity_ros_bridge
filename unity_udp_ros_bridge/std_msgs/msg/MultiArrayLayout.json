@@ -1,0 +1,12 @@
+{
+    "topic": "",
+    "msgType": "std_msgs/msg/MultiArrayLayout",
+    "data": {
+        "dim": {
+            "label": "",
+            "size": 0,
+            "stride": 0
+        },
+        "data_offset": 0
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "topic": "",
+    "msgType": "rover2_status_interface/msg/ODriveStatus",
+    "data": {
+        "timestamp": {
+            "sec": 0,
+            "nanosec": 0
+        },
+        "bus": "",
+        "id": [],
+        "disarm_reason": [],
+        "t_fet": [],
+        "t_motor": [],
+        "velocity": [],
+        "position": [],
+        "iq_set": [],
+        "iq_measured": [],
+        "bus_voltage": [],
+        "bus_current": []
+    }
+}

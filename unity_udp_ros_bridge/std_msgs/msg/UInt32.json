@@ -1,0 +1,7 @@
+{
+    "topic": "",
+    "msgType": "std_msgs/msg/UInt32",
+    "data": {
+        "data": 0
+    }
+}

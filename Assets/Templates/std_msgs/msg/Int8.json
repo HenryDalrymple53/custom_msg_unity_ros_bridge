@@ -1,0 +1,7 @@
+{
+    "topic": "",
+    "msgType": "std_msgs/msg/Int8",
+    "data": {
+        "data": 0
+    }
+}

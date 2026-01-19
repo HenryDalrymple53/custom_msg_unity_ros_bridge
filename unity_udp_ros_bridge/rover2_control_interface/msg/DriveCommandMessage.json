@@ -1,0 +1,20 @@
+{
+    "topic": "",
+    "msgType": "rover2_control_interface/msg/DriveCommandMessage",
+    "data": {
+        "controller_present": false,
+        "ignore_drive_control": false,
+        "drive_twist": {
+            "linear": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "angular": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        }
+    }
+}

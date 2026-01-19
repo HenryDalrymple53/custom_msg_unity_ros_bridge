@@ -1,0 +1,18 @@
+{
+    "topic": "",
+    "msgType": "rover2_status_interface/msg/MoveItLogs",
+    "data": {
+        "header": {
+            "stamp": {
+                "sec": 0,
+                "nanosec": 0
+            },
+            "frame_id": ""
+        },
+        "name": [],
+        "position": [],
+        "velocity": [],
+        "effort": [],
+        "status": 0
+    }
+}

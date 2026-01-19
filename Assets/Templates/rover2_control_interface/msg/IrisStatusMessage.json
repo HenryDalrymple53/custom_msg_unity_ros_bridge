@@ -1,0 +1,8 @@
+{
+    "topic": "",
+    "msgType": "rover2_control_interface/msg/IrisStatusMessage",
+    "data": {
+        "iris_connected": false,
+        "voltage_24v": 0
+    }
+}

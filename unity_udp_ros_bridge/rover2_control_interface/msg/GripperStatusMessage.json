@@ -1,0 +1,12 @@
+{
+    "topic": "",
+    "msgType": "rover2_control_interface/msg/GripperStatusMessage",
+    "data": {
+        "position_raw": 0,
+        "current": 0,
+        "temp": 0,
+        "distance": 0,
+        "light_on": false,
+        "laser_on": false
+    }
+}

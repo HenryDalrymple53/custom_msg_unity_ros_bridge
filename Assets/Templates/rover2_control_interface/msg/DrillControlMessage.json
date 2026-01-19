@@ -1,0 +1,8 @@
+{
+    "topic": "",
+    "msgType": "rover2_control_interface/msg/DrillControlMessage",
+    "data": {
+        "direction": false,
+        "speed": 0
+    }
+}

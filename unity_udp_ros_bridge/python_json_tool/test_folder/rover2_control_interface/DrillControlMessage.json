@@ -1,7 +1,0 @@
-{
-    "msgType": "DrillControlMessage",
-    "data": {
-        "direction": false,
-        "speed": 0
-    }
-}

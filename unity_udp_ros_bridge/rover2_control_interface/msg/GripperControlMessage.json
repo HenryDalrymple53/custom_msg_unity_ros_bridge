@@ -1,0 +1,10 @@
+{
+    "topic": "",
+    "msgType": "rover2_control_interface/msg/GripperControlMessage",
+    "data": {
+        "target": 0,
+        "should_home": false,
+        "toggle_light": false,
+        "toggle_laser": false
+    }
+}
