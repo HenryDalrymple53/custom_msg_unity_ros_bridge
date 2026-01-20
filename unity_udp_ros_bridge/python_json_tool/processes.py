@@ -138,6 +138,23 @@ class Processes:
         return result, i
 
 
+    def parse_service_structure(self, lines):
+        
+        if '---' not in lines:
+            return {}, {}
+
+        sep_index = lines.index('---')
+
+        request_lines = lines[:sep_index]
+        response_lines = lines[sep_index + 1:]
+
+        request_data, _ = self.parse_message_structure(request_lines)
+        response_data, _ = self.parse_message_structure(response_lines)
+
+        return request_data, response_data
+
+
+
 
     def convert_to_json(self,save_dir):
         for msg in self.message_dict:
@@ -163,6 +180,44 @@ class Processes:
                 with open(file_name, "w") as json_file:
                     json.dump(ros_json, json_file, indent=4)
                 print(json.dumps(ros_json, indent=4))
+
+
+        for srv in self.service_dict:
+            if not self.service_libs[srv.split("/")[0]]:
+                continue
+
+            output = run(
+                ["ros2", "interface", "show", srv],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+
+            lines = output.stdout.strip().split("\n")
+
+            request_data, response_data = self.parse_service_structure(lines)
+
+            ros_json = {
+                "service": "",
+                "srvType": srv,
+                "request": request_data,
+                "response": response_data
+            }
+
+            write_directory = (
+                Path(save_dir) /
+                srv.split("/")[0] /
+                srv.split("/")[1]
+            )
+            write_directory.mkdir(parents=True, exist_ok=True)
+
+            file_name = write_directory / f"{srv.split('/')[2]}.json"
+
+            with open(file_name, "w") as json_file:
+                json.dump(ros_json, json_file, indent=4)
+
+            print(json.dumps(ros_json, indent=4))
+
 
 
 

@@ -1,0 +1,13 @@
+{
+    "topic": "",
+    "msgType": "action_msgs/msg/GoalInfo",
+    "data": {
+        "goal_id": {
+            "uuid": []
+        },
+        "stamp": {
+            "sec": 0,
+            "nanosec": 0
+        }
+    }
+}

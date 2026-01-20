@@ -1,0 +1,6 @@
+{
+    "service": "",
+    "srvType": "std_srvs/srv/Empty",
+    "request": {},
+    "response": {}
+}

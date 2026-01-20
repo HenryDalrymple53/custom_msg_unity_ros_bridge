@@ -1,0 +1,9 @@
+{
+    "service": "",
+    "srvType": "std_srvs/srv/Trigger",
+    "request": {},
+    "response": {
+        "success": false,
+        "message": ""
+    }
+}

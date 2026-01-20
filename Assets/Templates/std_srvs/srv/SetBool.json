@@ -1,0 +1,11 @@
+{
+    "service": "",
+    "srvType": "std_srvs/srv/SetBool",
+    "request": {
+        "data": false
+    },
+    "response": {
+        "success": false,
+        "message": ""
+    }
+}

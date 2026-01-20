@@ -1,0 +1,23 @@
+{
+    "topic": "",
+    "msgType": "action_msgs/msg/GoalStatus",
+    "data": {
+        "STATUS_UNKNOWN": 0,
+        "STATUS_ACCEPTED": 0,
+        "STATUS_EXECUTING": 0,
+        "STATUS_CANCELING": 0,
+        "STATUS_SUCCEEDED": 0,
+        "STATUS_CANCELED": 0,
+        "STATUS_ABORTED": 0,
+        "goal_info": {
+            "goal_id": {
+                "uuid": []
+            },
+            "stamp": {
+                "sec": 0,
+                "nanosec": 0
+            }
+        },
+        "status": 0
+    }
+}
