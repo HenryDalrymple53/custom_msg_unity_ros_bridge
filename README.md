@@ -61,3 +61,64 @@ This is meant to be a module that can be merged with other modules, such as the 
 
 This is just a demo to be built off of / used in another project.
 
+Example usage
+
+#### Message generation
+After sourcing all relevant directories for wanted messages, run jsonGenGui.py. This may require you to install PyQt6. You can do this with 
+```
+pip install -r requirements.txt
+```
+in the same directory.
+Then, run 
+```
+python3 jsonGenGUI.py
+```
+
+![Message Library Selection](https://github.com/user-attachments/assets/23b358d3-0d01-4271-b6b0-033b659c23fe)
+
+1. Select the **message libraries** you want to define.
+2. Choose a **save directory**.
+   - Recommended: `Unity/Assets/Templates` (but any directory works).
+3. Once everything is configured, click **“Process Messages”**.
+
+> **Note:** The application may freeze for a while during processing. This is expected—just let it run.
+
+---
+
+## Unity Examples
+
+### Subscription Node Example
+
+![Subscription Node Example](https://github.com/user-attachments/assets/4dd4751e-2c98-4498-9fe9-e3f10343ea25)
+
+Example of a **subscription node** set up in Unity.
+
+---
+
+### Publishing Node Example
+
+![Publishing Node Example](https://github.com/user-attachments/assets/c384c43f-ddfd-4eaf-b4cc-e6fb6fcad239)
+
+Example of a **publishing node** set up in Unity.
+
+---
+
+## UDP Controller Setup
+
+![UDP Controller Object](https://github.com/user-attachments/assets/b29be359-a8a0-484e-bfb4-6026ab4efb8c)
+
+You need to create a **UDP Object** with the **UDP Controller** script attached.
+
+- Set the **Host** to `localhost`.
+
+---
+
+## Test Object Configuration
+
+![Test Object Configuration](https://github.com/user-attachments/assets/d4182165-1fa7-4d32-8cbf-2ae18d674bf3)
+
+The **test object** manages both publishing and subscribing.
+
+- It contains **two scripts**:
+  - Each script has an attached `.json` text file
+- It also includes a reference to the **UDPController** object
