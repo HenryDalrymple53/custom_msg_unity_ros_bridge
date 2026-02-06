@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
+using Unity.VisualScripting;
 
 public class TestReceiver : MonoBehaviour
 {
@@ -19,7 +20,13 @@ public class TestReceiver : MonoBehaviour
     {
         while (true) // Or some condition
         {
-            Debug.Log(udpController.GetLatestMessage("drive_topic"));
+            driveMessage = udpController.GetLatestMessage("drive_topic");
+            if (driveMessage != null)
+            {
+                Debug.Log(driveMessage["data"]["drive_twist"]["linear"]["x"]);
+
+            }
+
             
             yield return new WaitForSeconds(1f); // Wait 1 second
         }

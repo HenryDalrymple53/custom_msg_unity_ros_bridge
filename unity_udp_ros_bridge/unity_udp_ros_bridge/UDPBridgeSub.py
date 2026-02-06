@@ -38,10 +38,10 @@ class UDPBridgeSub(Node):
         if isinstance(msg, (list, tuple)):
             return [self.set_dict_from_fields(x) for x in msg]
 
-        # Case 2: ROS message object (has __slots__)
-        elif hasattr(msg, '__slots__'):
+        # Case 2: ROS message object (has _get_fields_and_field_types)
+        elif hasattr(msg, 'get_fields_and_field_types'):
             d = {}
-            for field in msg.__slots__:
+            for field in msg.get_fields_and_field_types().keys():
                 value = getattr(msg, field)
                 d[field] = self.set_dict_from_fields(value)
             return d
